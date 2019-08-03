@@ -5,12 +5,19 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication /** This is the javadoc example. */
+/***
+ * Classe Principal da Aplicação.
+ */
+
+@SpringBootApplication
 @ComponentScan(basePackageClasses = { TestController.class })
-@EnableAutoConfiguration /** This is the javadoc example. */
+@EnableAutoConfiguration
 
 public class TestServiceApplication {
-	/** Metodo main */
+
+	/***
+	 * Metodo main 
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(TestServiceApplication.class, args);
 		System.exit(0);

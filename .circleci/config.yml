@@ -18,28 +18,7 @@ jobs:
       - store_artifacts:
           path: ~/repo/target/cemailService-0.0.1-SNAPSHOT.jar
           destination: package
-  
-  checkstyle:
-    docker:
-      - image: checkstyle/maven-builder-image
-    
-    working_directory: ~/repo
-
-    environment:
-      MAVEN_OPTS: -Xmx3200m
-
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "pom.xml" }}
-      - run: mvn checkstyle:check
-      - store_artifacts:
-          path: ~/repo/target/checkstyle-result.xml
-          destination: test-results/checkstyle
-      - store_test_results:
-          path: test-results
-
+          
   pmd:
     docker:
       - image: checkstyle/maven-builder-image
