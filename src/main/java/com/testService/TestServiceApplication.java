@@ -1,21 +1,18 @@
 package com.testService;
 
-import com.testService.TestController;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@SpringBootApplication /** This is the javadoc example. */
 @ComponentScan(basePackageClasses = { TestController.class })
-@EnableAutoConfiguration
-public class TestServiceApplication {
+@EnableAutoConfiguration /** This is the javadoc example. */
 
-	private String bar = new String("bar");
+public class TestServiceApplication {
+	/** Metodo main */
 	public static void main(String[] args) {
 		SpringApplication.run(TestServiceApplication.class, args);
 		System.exit(0);
 	}
-
 }

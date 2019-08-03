@@ -4,11 +4,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@CrossOrigin
+@RestController /** This is the javadoc example. */
+@CrossOrigin /** This is the javadoc example. */
 public class TestController {
 
-	@GetMapping("/home")
+@GetMapping("/home")
+/** {@inheritDoc} */
 	public String homeRequest() {
 		return "Hello World!";
 	}
